@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+student:
+  name: zhangsan
+  age: 20
+  claszz: {
+    name: 1706
+  }
+  array: [10,20,30,40,50]
+
+spring:
+    mvc:
+        view:
+          prefix: /WEB-INF/jsp/
+          suffix: .jsp
