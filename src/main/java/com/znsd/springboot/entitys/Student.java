@@ -6,8 +6,9 @@ import org.springframework.stereotype.Component;
 import java.util.Arrays;
 
 /**
- * Created by Administrator on 2018/11/28.
- */
+* @Author duankai
+* @Date 2018/11/30  16:14
+*/
 @ConfigurationProperties(prefix = "student")
 @Component
 public class Student {
