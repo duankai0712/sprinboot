@@ -4,6 +4,7 @@ package com.znsd.springboot.controller;
 import com.znsd.springboot.entitys.Student;
 import com.znsd.springboot.entitys.StudentService;
 import com.znsd.springboot.error.MyException;
+import com.znsd.springboot.error.MyException_DJ;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -43,6 +44,16 @@ public class HeeloController {
     public String demo(@PathVariable("id")Integer id){
         if(id==5){
            throw new MyException();
+        }
+        return "demo";
+    }
+
+    //-----DJ test代码
+
+    @RequestMapping("DJ/{name}")
+    public String demo2(@PathVariable("name")String name){
+        if("狗子".equals(name)){
+            throw new MyException_DJ();
         }
         return "demo";
     }
