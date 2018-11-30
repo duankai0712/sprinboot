@@ -3,8 +3,10 @@ package com.znsd.springboot.controller;
 
 import com.znsd.springboot.entitys.Student;
 import com.znsd.springboot.entitys.StudentService;
+import com.znsd.springboot.error.MyException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -35,5 +37,13 @@ public class HeeloController {
     public String longing(){
         System.out.println("该有");
         return "hello";
+    }
+
+    @RequestMapping("demo/{id}")
+    public String demo(@PathVariable("id")Integer id){
+        if(id==5){
+           throw new MyException();
+        }
+        return "demo";
     }
 }
