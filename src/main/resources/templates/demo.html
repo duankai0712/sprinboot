@@ -3,8 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-</head>
+    <html lang="en" xmlns:th="http://www.thymeleaf.org">
+    </head>
 <body>
-    <h1>来了没有</h1>
+    <h1>mybatis</h1>
+    <table width="300px" border="1px" >
+        <tr>
+            <td>学号</td>
+            <td>姓名</td>
+            <td>性别</td>
+        </tr>
+
+    <tr th:each="prods : ${grede}">
+        <td th:text="${prods.stuid}"></td>
+        <td th:text="${prods.stuname}"></td>
+        <td th:text="${prods.sex}"></td>
+    </tr>
+    </table>
 </body>
 </html>
