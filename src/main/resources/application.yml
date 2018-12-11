@@ -33,3 +33,8 @@ spring:
 mybatis: #扫描 classpath:mybatis/Mapper/下所有的xml
   mapper-locations: classpath:mybatis/Mapper/*.xml
   type-aliases-package: classpath:com.znsd.springboot.entitys
+
+
+
+
+
